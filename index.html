@@ -393,7 +393,64 @@ font-weight:800;
 .toast{position:fixed;bottom:28px;right:28px;background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;padding:13px 22px;border-radius:11px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;z-index:9999;animation:fadeUp .3s ease;box-shadow:0 4px 20px rgba(79,124,255,.35);}
 
 @media(max-width:1000px){.g3{grid-template-columns:1fr;}.targets{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.drow,.drow-header{grid-template-columns:80px 1fr auto auto;}.drow .dtag.teo,.drow .dtag.que,.drow .dtag.rev,.drow .dtag.port,.drow .dtag.leg{display:none;}.drow-header span:nth-child(n+3):not(:last-child){display:none;}}
+/* ===== MOBILE RESPONSIVO REAL ===== */
+@media(max-width:900px){
+
+.drow,
+.drow-header{
+grid-template-columns:70px 1fr 40px;
+gap:8px;
+}
+
+/* header simplificado */
+.drow-header span:nth-child(3),
+.drow-header span:nth-child(4),
+.drow-header span:nth-child(5),
+.drow-header span:nth-child(6),
+.drow-header span:nth-child(7){
+display:none;
+}
+
+/* linha vira "card vertical" */
+.drow{
+grid-template-columns:70px 1fr 40px;
+align-items:start;
+padding:14px 18px;
+}
+
+/* coluna conteúdo vira stack */
+.drow .dtag.mat{
+grid-column:2;
+margin-bottom:6px;
+}
+
+.drow .dtag.port,
+.drow .dtag.leg,
+.drow .dtag.teo,
+.drow .dtag.que,
+.drow .dtag.rev{
+grid-column:2;
+display:block;
+font-size:11px;
+opacity:.95;
+}
+
+/* checkbox direita */
+.dcheck{
+grid-column:3;
+grid-row:1 / span 6;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* dia */
+.dname{
+font-size:11px;
+margin-top:4px;
+}
+
+}
 @media(max-width:760px){.g2{grid-template-columns:1fr;}.banca-grid{grid-template-columns:1fr;}.bitem:nth-child(odd){border-right:none;}.pom{font-size:64px;}.frase{font-size:22px;}}
 </style>
 </head>
